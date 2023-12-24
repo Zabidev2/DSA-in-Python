@@ -1,7 +1,23 @@
 class Node:
-    def __init__(self, data, next = None):
+    def __init__(self, data, next=None):
+        """
+        Initializes a new instance of the Node class.
+
+        Args:
+            data: The data to be stored in the node.
+            next: The reference to the next node in the linked list.
+        """
         self.data = data
         self.next = next
+
+    def __str__(self):
+        """
+        Returns a human-readable representation of the node.
+
+        Returns:
+            A string representation of the node.
+        """
+        return str(self.data)
 
 class LinkedList:
     def __init__(self, head = None):
