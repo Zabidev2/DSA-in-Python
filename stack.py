@@ -46,4 +46,8 @@ my_stack.pop()
 my_stack.pop()
 my_stack.print_stack()
 
-            
+
+
+def test():
+    print("testing github commits")
+
