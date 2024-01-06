@@ -1,6 +1,11 @@
 from collections import deque
 
 class Stack:
+    """ Stack is implemented through deque from collections modeule.
+     Deque is preferred over a list in the cases where we need quicker
+       append and pop operations from both the ends of the container, 
+       as deque provides an O(1) time complexity for append and pop operations
+         as compared to a list that provides O(n) time complexity. """
     
     def __init__(self, length = 5):
         
@@ -23,31 +28,17 @@ class Stack:
             print("Stack is Empty!")
 
     def print_stack(self):
-        for i in self.stack:
-            print(i, end = " ")
+        if len(self.stack):
+            for i in self.stack:
+                print(i, end = " ")
+                print()
+        else:
+            print("Stack is empty!")
 
-
-my_stack = Stack(6)
-my_stack.print_stack()
-my_stack.push(1)
-my_stack.push(2)
-my_stack.push(3)
-my_stack.push(4)
-my_stack.push(5)
-my_stack.push(6)
-my_stack.print_stack()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.pop()
-my_stack.print_stack()
-
-
-
-def test():
-    print("testing github commits")
+if __name__== "__main__":
+    my_stack = Stack(6)
+    my_stack.print_stack()
+    my_stack.push(1)
+    my_stack.pop()
+    my_stack.print_stack()
 
